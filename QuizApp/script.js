@@ -51,7 +51,11 @@ function loadQuestion(){
 
 submitButton.addEventListener("click", ()=>{
     currentQuestionNumber++;
-    loadQuestion();
+    if(currentQuestionNumber < questionsData.length) {
+        loadQuestion();
+    }else{
+        alert('Test finished I let me know if you liked')
+    }
 })
 
 
