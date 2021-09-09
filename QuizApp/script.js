@@ -52,8 +52,11 @@ function loadQuestion(){
 function loadResult(){
     console.log(score)
     quiz.innerHTML =
-        `<h2>Results</h2>
-<div class="result">you answered ${score} of ${questionsData.length} questions correctly</div>`
+        `<div class="main-container">
+<h2>Results</h2>
+<div class="result">you answered ${score} of ${questionsData.length} questions correctly</div>
+<button onclick="location.reload()">Reload</button>
+</div>`
 }
 
 
