@@ -5,14 +5,13 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    background-color: #b8c6db;
     background-image: linear-gradient(315deg, #b8c6db 50%, #f5f7fa 100%);
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+    margin:0;
 }
 .main-container{
     position: relative;
@@ -34,12 +33,15 @@ body{
 ul{
     list-style: none;
     padding: 0;
+    margin-left: 2rem;
 }
 ul li{
     margin: 1rem 0;
     font-size: 1.1rem;
 }
-
+input,label{
+    cursor: pointer;
+}
 .main-container > button{
     position: absolute;
     bottom: 0;
@@ -55,4 +57,9 @@ ul li{
 }
 .main-container > button:hover{
     background-color: #083e78;
+}
+.result{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 6rem;
 }

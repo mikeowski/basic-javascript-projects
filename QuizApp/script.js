@@ -27,15 +27,16 @@ const questionsData = [
     }
 ]
 
+const quiz = document.getElementById('quiz')
 const questionEl = document.getElementById('question')
+const answerEls = document.querySelectorAll('.answer');
 const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
 const submitButton = document.getElementById('submit')
-
 let currentQuestionNumber = 0 ;
-
+let score = 0;
 loadQuestion()
 
 function loadQuestion(){
@@ -48,15 +49,43 @@ function loadQuestion(){
 
 }
 
+function loadResult(){
+    console.log(score)
+    quiz.innerHTML =
+        `<h2>Results</h2>
+<div class="result">you answered ${score} of ${questionsData.length} questions correctly</div>`
+}
+
 
 submitButton.addEventListener("click", ()=>{
-    currentQuestionNumber++;
-    if(currentQuestionNumber < questionsData.length) {
-        loadQuestion();
+    answer = answerCheck()
+
+    if(answer) {
+        if(answer === questionsData[currentQuestionNumber].correct){
+            score++;
+        }
+            currentQuestionNumber++;
+        if(currentQuestionNumber < questionsData.length){loadQuestion();}
+        else(loadResult())
+
     }else{
-        alert('Test finished I let me know if you liked')
+        alert('Please answer the question')
     }
 })
+
+
+function answerCheck(){
+
+  let answer = undefined
+  answerEls.forEach(answerEl =>{
+      if(answerEl.checked){
+         answer = answerEl.id
+      }
+      answerEl.checked = false
+
+  })
+    return answer
+}
 
 
 
