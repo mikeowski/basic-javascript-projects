@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container1,
+.container2,
+.container3,
+.container4 {
+  height: 100vh;
+  p: 0;
+  margin: 0;
+  color: wheat;
+}
+.container1 {
+  background-color: gray;
+}
+.container2 {
+  background-color: black;
+}
+.container3 {
+  background-color: gray;
+  display: flex;
+}
+.container4 {
+  background-color: black;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+.description {
+  padding-left: 30px;
+  width: 50%;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+.description2 {
+  padding-left: 30px;
+  width: 50%;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
